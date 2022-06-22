@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://rm-bp144mb62vrt49285wo.mysql.rds.aliyuncs.com:3306/sunshop
+      username: sunshop
+      password: MIXINsunshop6879
+      #    url: jdbc:mysql://cd-cdb-7mvz65du.sql.tencentcdb.com:61740/shop
+      #    username: root
+      #    password: MIXINmysql6879
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      druid:
+        initial-size: 3
+        min-idle: 3
+        max-active: 15
+        max-wait: 5000
+        break-after-acquire-failure: true
+        connection-error-retry-attempts: 3
+        time-between-eviction-runs-millis: 90000
+        min-evictable-idle-time-millis: 1800000
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        validation-query: select 1
+
+  redis:
+    host: mxzero.top
+    port: 36379
+    password: MIXINredis6879
+
+
+mxzero:
+  config:
+    jwt:
+      expire: 7200
+      issuer: mxzero
+      secret: mxzero-prod
+      site: https://www.mxzero.top
+
+
+file:
+  path:
+    prefix: /usr/data/sunshop
