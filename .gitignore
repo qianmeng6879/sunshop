@@ -4,6 +4,8 @@
 .idea
 target/
 
+application-prod.yml
+
 # Log file
 *.log
 
